@@ -6,6 +6,7 @@
 
   --text-fluid-heading: clamp(2.2rem, 4vw + 1rem, 4rem);
   --text-fluid-subheading: clamp(1.4rem, 2vw + 1rem, 2rem);
+  --spacing-fluid-hero: clamp(9rem, 25vw + 1rem, 10rem);
 }
 
 @layer base {
@@ -27,7 +28,11 @@
 
 @layer components {
   .btn {
-    @apply rounded-lg px-4 py-2 flex items-center gap-2;
+    @apply flex items-center gap-2 rounded-lg px-4 py-2;
+  }
+
+  .hero-ring {
+    @apply absolute inset-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-emerald-300/10 shadow-[0_0_80px_inset] shadow-emerald-300/10;
   }
 }
 

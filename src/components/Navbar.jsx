@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-0 left-0 z-10 w-full p-4">
-        <nav className="relative mx-auto flex max-w-lg items-center justify-between rounded-4xl p-2 shadow-lg outline outline-gray-300 backdrop-blur-lg">
+        <nav className="relative mx-auto flex max-w-lg items-center justify-between rounded-4xl border border-white/15 bg-white/10 p-2 shadow-lg backdrop-blur">
           {/* logo */}
           <a
             href="#home"
@@ -23,7 +23,7 @@ export default function Navbar() {
           </a>
           {/* toggle menu */}
           <button
-            className="md:hidden cursor-pointer"
+            className="ham-button cursor-pointer md:hidden"
             onClick={() => setIsMenuOpen((isMenuOpen) => !isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -66,15 +66,15 @@ export default function Navbar() {
 
           {/* mobile menu items */}
           {isMenuOpen && (
-            <ul className="absolute top-16 left-0 mx-auto w-full rounded-4xl bg-white p-6 shadow-lg outline outline-gray-300 md:hidden">
+            <ul className="absolute top-16 left-0 mx-auto w-full rounded-4xl border border-white/15 bg-white/90 p-6 shadow-lg md:hidden">
               {navLinks.map((link, index) => (
-                <li>
+                <li key={index}>
                   <a
                     onClick={() => {
                       setActiveLink(link.href);
                       setIsMenuOpen(false);
                     }}
-                    className={`block py-2 font-medium ${activeLink === link.href ? "text-blue-600" : "text-gray-500 hover:text-blue-600"}`}
+                    className={`block py-4 font-medium ${activeLink === link.href ? "text-blue-600" : "text-gray-500 hover:text-blue-600"}`}
                     key={index}
                     href={link.href}
                   >
