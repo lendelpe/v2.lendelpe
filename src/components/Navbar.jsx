@@ -66,7 +66,7 @@ export default function Navbar() {
 
           {/* mobile menu items */}
           {isMenuOpen && (
-            <ul className="absolute top-16 left-0 mx-auto w-full rounded-4xl border border-white/15 bg-white/90 p-6 shadow-lg md:hidden">
+            <ul className="absolute top-16 left-0 mx-auto w-full rounded-4xl border border-white/15 bg-white/95 p-6 shadow-lg md:hidden">
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <a

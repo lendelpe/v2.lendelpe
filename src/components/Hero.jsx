@@ -4,7 +4,7 @@ import grainImage from "../assets/images/grain.jpg";
 export default function Hero() {
   return (
     <>
-      <section className="section relative h-svh overflow-clip border z-0">
+      <section className="section relative z-0 h-svh overflow-clip">
         {/* blue gradient circle */}
         <div className="absolute -top-28 -left-28 -z-10 h-[500px] w-[500px] rounded-full bg-gradient-to-tr from-blue-400/20 to-blue-500/20 blur-[80px]"></div>
 
@@ -16,10 +16,10 @@ export default function Hero() {
           }}
         ></div>
 
-        <div className="size-[620px]  hero-ring"></div>
-        <div className="size-[820px]  hero-ring"></div>
-        <div className="size-[1020px]  hero-ring"></div>
-        <div className="size-[1220px]  hero-ring"></div>
+        <div className="hero-ring size-[620px]"></div>
+        <div className="hero-ring size-[820px]"></div>
+        <div className="hero-ring size-[1020px]"></div>
+        <div className="hero-ring size-[1220px]"></div>
 
         <div className="absolute top-1/2 left-1/2 container -translate-x-1/2 -translate-y-1/2 space-y-8 pt-8">
           {/* image */}
@@ -56,7 +56,7 @@ export default function Hero() {
               </a>
               <a
                 href="#"
-                className="btn group border border-gray-200 text-gray-400 hover:bg-gray-200"
+                className="btn group border border-gray-300 text-gray-400 hover:bg-gray-200"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
