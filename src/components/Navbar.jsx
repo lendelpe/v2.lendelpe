@@ -1,4 +1,4 @@
-import { Moon, Sun } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import GrainImage from "../assets/images/grain.jpg";
 
@@ -68,7 +68,7 @@ export default function Navbar() {
           {/* logo */}
           <a
             href="#home"
-            className="order-1 mr-auto grid size-8 place-items-center rounded-full bg-blue-600 font-semibold text-white md:mr-0"
+            className="order-1 mr-auto grid size-8 place-items-center rounded-full bg-gradient-to-r from-blue-400 to-blue-500 font-semibold text-white md:mr-0"
           >
             GP
           </a>
@@ -78,27 +78,10 @@ export default function Navbar() {
             onClick={() => setIsMenuOpen((isMenuOpen) => !isMenuOpen)}
           >
             {isMenuOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24px"
-                viewBox="0 -960 960 960"
-                width="32px"
-                fill="#e3e3e3"
-                className="fill-gray-600"
-              >
-                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-              </svg>
+              <X />
+
             ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="32px"
-                viewBox="0 -960 960 960"
-                width="32px"
-                fill="#e3e3e3"
-                className="fill-gray-600"
-              >
-                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-              </svg>
+              <Menu />
             )}
           </button>
 
@@ -108,7 +91,7 @@ export default function Navbar() {
               <a
                 key={index}
                 href={link.href}
-                className={`font-medium ${activeLink === link.href ? "text-blue-600" : "text-gray-500 hover:text-blue-600"}`}
+                className={`font-medium ${activeLink === link.href ? "text-white" : "text-white/70 hover:text-white"}`}
               >
                 {link.label}
               </a>

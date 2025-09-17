@@ -7,26 +7,21 @@
   --text-fluid-heading: clamp(2.2rem, 4vw + 1rem, 4rem);
   --text-fluid-subheading: clamp(1.4rem, 2vw + 1rem, 2rem);
   --spacing-fluid-hero: clamp(9rem, 25vw + 1rem, 10rem);
+
+  /* colors */
+  --color-clr-bg: #fff;
+  --color-clr-text: #393938;
+  --color-clr-heading: #393938;
+  --color-clr-primary: #0850fd;
+  --color-test: #ff0000;
 }
 
-:root {
-  /* Light theme (default) */
-  --color-bg: 255 255 255; /* white */
-  --color-fg: 17 24 39; /* slate-900 */
-  --color-surface: 243 244 246; /* slate-100 */
-  --color-muted: 75 85 99; /* gray-600 */
-  --color-accent: 168 85 247; /* purple-500 */
-  --color-ring: 168 85 247; /* purple-500 */
-}
-
-/* Dark theme overrides when `.dark` is present on <html> */
-:root.dark {
-  --color-bg: 55 65 81; /* gray-700 */
-  --color-fg: 255 255 255; /* white */
-  --color-surface: 31 41 55; /* gray-800 */
-  --color-muted: 209 213 219; /* gray-300 */
-  --color-accent: 245 158 11; /* amber-500 */
-  --color-ring: 245 158 11; /* amber-500 */
+.dark {
+  --color-clr-bg: #050624;
+  --color-clr-text: #e5e7eb;
+  --color-clr-heading: #ffffff;
+  --color-clr-primary: #0850fd;
+  --color-test: #00ff00;
 }
 
 @layer base {
@@ -48,7 +43,7 @@
 
 @layer components {
   .btn {
-    @apply flex items-center gap-2 rounded-lg px-4 py-2;
+    @apply flex items-center gap-2 rounded-lg px-6 h-12;
   }
 
   .hero-ring {
