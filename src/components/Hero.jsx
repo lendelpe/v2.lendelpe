@@ -6,11 +6,11 @@ export default function Hero() {
     <>
       <section className="section relative z-0 h-svh overflow-clip">
         {/* blue gradient circle */}
-        <div className="absolute -top-28 -left-28 -z-10 h-[500px] w-[500px] rounded-full bg-gradient-to-tr from-blue-400/20 to-blue-500/20 blur-[80px]"></div>
+        <div className="absolute -top-28 -left-28 -z-10 h-[250px] w-[250px] sm:h-[500px] sm:w-[500px]  rounded-full bg-gradient-to-tr from-blue-400/5 to-blue-500/5 blur-[80px]"></div>
 
         {/* applied grain effect on the bg */}
         <div
-          className="absolute inset-0 -z-30 opacity-10"
+          className="absolute inset-0 -z-30 opacity-5"
           style={{
             backgroundImage: `url(${grainImage})`,
           }}
@@ -23,7 +23,8 @@ export default function Hero() {
 
         <div className="absolute top-1/2 left-1/2 container -translate-x-1/2 -translate-y-1/2 space-y-8 pt-8">
           {/* image */}
-          <div className="size-fluid-hero mx-auto overflow-hidden rounded-full border-4 border-blue-500">
+          <div className="size-fluid-hero relative mx-auto overflow-hidden rounded-full border-2 border-sky-400/30">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-sky-400 opacity-20"></div>
             <img src={heroProfile} alt="" />
           </div>
           {/* content */}
