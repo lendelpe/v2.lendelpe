@@ -91,7 +91,7 @@ export default function Navbar() {
               <a
                 key={index}
                 href={link.href}
-                className={`font-medium ${activeLink === link.href ? "text-white" : "text-white/70 hover:text-white"}`}
+                className={`font-medium ${activeLink === link.href ? "text-blue-400" : "text-gray-400 hover:text-blue-400"}`}
               >
                 {link.label}
               </a>
@@ -100,7 +100,7 @@ export default function Navbar() {
 
           {/* mobile menu items */}
           {isMenuOpen && (
-            <ul className="absolute top-16 left-0 z-0 mx-auto w-full rounded-4xl border border-white/15 bg-white/95 p-2 shadow-lg md:hidden dark:bg-gray-800">
+            <ul className="absolute top-16 left-0 z-0 mx-auto w-full rounded-4xl border border-white/15 text-clr-text bg-clr-bg p-2 shadow-lg md:hidden overflow-hidden">
               <div
                 className="absolute inset-0 -z-10 opacity-5"
                 style={{
@@ -114,7 +114,7 @@ export default function Navbar() {
                       setActiveLink(link.href);
                       setIsMenuOpen(false);
                     }}
-                    className={`block rounded-4xl p-4 font-medium transition hover:text-white hover:bg-gray-600 ${activeLink === link.href ? "text-blue-600" : "text-gray-500 hover:text-blue-600"}`}
+                    className={`block rounded-4xl p-4 font-medium transition hover:text-white hover:bg-blue-400 ${activeLink === link.href ? "text-blue-600" : "text-gray-500 hover:text-blue-600"}`}
                     key={index}
                     href={link.href}
                   >

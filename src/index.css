@@ -6,28 +6,32 @@
 
   --text-fluid-heading: clamp(2.2rem, 4vw + 1rem, 4rem);
   --text-fluid-subheading: clamp(1.4rem, 2vw + 1rem, 2rem);
-  --spacing-fluid-hero: clamp(9rem, 25vw + 1rem, 10rem);
+  --spacing-fluid-hero: clamp(10rem, 25vw + 1rem, 11rem);
 
   /* colors */
-  --color-clr-bg: #fff;
-  --color-clr-text: #393938;
-  --color-clr-heading: #393938;
+  --color-clr-bg: #f8f8ff;
+  --color-clr-text: #6a7282; /* gray 500 */
+  --color-clr-heading: #364153;
   --color-clr-primary: #0850fd;
   --color-test: #ff0000;
+  --color-clr-border: #6a7282;
+  --color-clr-accent: #99a1af; /* gray 400 */
 }
-
+/* @apply text-gray-700 */
 .dark {
-  --color-clr-bg: #050624;
-  --color-clr-text: #e5e7eb;
+  --color-clr-bg: #101828;
+  --color-clr-text: #999999;
   --color-clr-heading: #ffffff;
   --color-clr-primary: #0850fd;
   --color-test: #00ff00;
+  --color-clr-border: #26fffff;
+  --color-clr-accent: #ffffff4d;
 }
 
 @layer base {
   body {
     font-family: var(--font-inter);
-    @apply text-gray-600;
+    @apply text-gray-500;
   }
   h1,
   h2,
@@ -35,6 +39,7 @@
     font-family: var(--font-outfit);
     line-height: 1.2;
     font-weight: 600;
+    color: var(--color-clr-heading);
   }
   a {
     font-family: var(--font-outfit);
