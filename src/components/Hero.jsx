@@ -5,9 +5,9 @@ import { ArrowDown, Download, LaptopMinimal } from "lucide-react";
 export default function Hero() {
   return (
     <>
-      <section className="section relative z-0 h-screen overflow-clip">
+      <section className="section relative z-0 h-svh overflow-clip">
         {/* blue gradient circle */}
-        <div className="absolute -top-28 -left-28 -z-10 h-[300px] w-[300px] sm:h-[500px] sm:w-[500px]  rounded-full bg-gradient-to-tr from-blue-400/10 to-blue-500/10 blur-[80px]"></div>
+        <div className="absolute -top-28 -left-28 -z-10 h-[500px] w-[500px]  rounded-full bg-gradient-to-tr from-blue-400/10 to-blue-500/10 blur-[80px]"></div>
 
         {/* applied grain effect on the bg */}
         <div
@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="hero-ring size-[1020px]"></div>
         <div className="hero-ring size-[1220px]"></div>
 
-        <div className="absolute top-1/2 left-1/2 container -translate-x-1/2 -translate-y-1/2 space-y-8 pt-8">
+        <div className="container  space-y-8 pt-8 2xl:pt-32">
           {/* hero image */}
           <div className="size-fluid-hero relative mx-auto overflow-hidden rounded-full border-2 border-blue-400">
 

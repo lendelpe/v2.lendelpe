@@ -48,7 +48,7 @@
 
 @layer components {
   .btn {
-    @apply flex items-center gap-2 rounded-lg px-6 h-12;
+    @apply flex items-center gap-2 rounded-lg px-6 h-12 font-medium tracking-wide;
   }
 
   .hero-ring {
